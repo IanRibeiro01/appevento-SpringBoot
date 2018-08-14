@@ -2,6 +2,9 @@
 <html xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 
 <head>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+	<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<meta charset="UTF-8">
 	<title>Eventos</title>
 </head>
@@ -16,12 +19,14 @@
 		<input type="text" value="" name="local" id="localId"><br>
 
 		<label for="dataId">Data: </label><br>
-		<input type="text" value="" name="data" id="dataId"><br>
+		<input type="date" value="" name="data" id="dataId"><br>
 
 		<label for="horarioId">Horário: </label><br> 
-		<input type="date" value="" name="horario" id="horarioId">
+		<input type="text" value="" name="horario" id="horarioId">
 		<br><br>
 		<button type="submit">Salvar</button>
 	</form>
+	
+	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 </body>
 </html>
