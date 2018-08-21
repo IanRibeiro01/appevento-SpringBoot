@@ -6,27 +6,59 @@
 	<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<meta charset="UTF-8">
-	<title>Eventos</title>
+	<title>Events Calendar</title>
 </head>
 <body>
-	<h1>Cadastro de Eventos:</h1>
-	<form method="post">
+	<header>
+		<nav>
+		    <div class="nav-wrapper">
+		      <a href="/index" class="brand-logo">Events Calendar</a>
+		      <ul class="right hide-on-med-and-down">
+		        <li>
+		        	<a href="/index" class="waves-effect waves-light btn">	
+	  				Lista de Eventos<i class="material-icons left">dehaze</i></a>
+		        </li>
+		      </ul>
+		    </div>
+	  	</nav>
+	 </header> 	
 
-		<label for="nomeId">Nome: </label><br> 
-		<input type="text" value="" name="nome" id="nomeId"><br>
+	<div class="container">
+		<div class="row">
+			<div class="col s9 offset-s3">
+				<h2>Cadastro de Eventos</h2>
+			</div>
+		</div>
+	  	<br><br>
+	  		
+		<form method="post">
+			<div class="input-field">
+				<label for="nomeId">Nome </label><br> 
+				<input type="text" value="" name="nome" id="nomeId" required><br>
+			</div>
+			<div class="row">
+			<div class="input-field col s6">
+				<label for="localId">Local </label><br>
+				<input type="text" value="" name="local" id="localId" required><br>
+			</div>
+			<div class="input-field col s3">
+				<label for="dataId">Data </label><br>
+				<input type="date" value="" name="data" id="dataId" required><br>
+			</div>
+			<div class="input-field col s3">
+				<label for="horarioId">Horário </label><br> 
+				<input type="time" value="" name="horario" id="horarioId" required>
+			</div>
+			</div>
 
-		<label for="localId">Local: </label><br>
-		<input type="text" value="" name="local" id="localId"><br>
-
-		<label for="dataId">Data: </label><br>
-		<input type="date" value="" name="data" id="dataId"><br>
-
-		<label for="horarioId">Horário: </label><br> 
-		<input type="text" value="" name="horario" id="horarioId">
-		<br><br>
-		<button type="submit">Salvar</button>
-	</form>
-	
+			<div class="row">
+			<div class="col s7 offset-s5">
+			<button type="submit" class="waves-effect waves-light btn">
+			Salvar<i class="material-icons left">save</i></button>
+			</div>
+			</div>
+		</form>
+	</div>
 	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 </body>
 </html>
