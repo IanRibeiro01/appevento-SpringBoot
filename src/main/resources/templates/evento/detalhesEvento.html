@@ -25,15 +25,29 @@
 	  	</nav>
 	 </header> 	
 	 
-	 <div th:each="evento : ${evento}" class="container">
-	 	<div class="row">
-	 		<p><span th:text="${evento.nome}"></span></p>
-	 		<p><span th:text="${evento.local}"></span></p>
-	 		<p><span th:text="${evento.data}"></span></p>
-	 		<p><span th:text="${evento.horario}"></span></p>
-	 	</div>
-	 </div>
-
+	 <div class="container">
+		 <div th:each="evento : ${evento}">
+		 	<div class="row">
+		 		<p><b>Evento:</b> <span th:text="${evento.nome}"></span></p>
+		 		<p><b>Local:</b> <span th:text="${evento.local}"></span></p>
+		 		<p><b>Data:</b> <span th:text="${evento.data}"></span></p>
+		 		<p><b>Horário:</b> <span th:text="${evento.horario}"></span></p>
+		 	</div>
+		 </div>
+	 
+		 <form method="post">
+		 	<div class="input-field">
+				<label for="nomeId">Nome </label><br> 
+				<input type="text" value="" name="nome" id="nomeId" required><br>
+			</div>
+			<div class="input-field">
+				<label for="rgId">RG </label><br> 
+				<input type="text" value="" name="rg" id="rgId" required><br>
+			</div>
+			<button type="submit" class="waves-effect waves-light btn">
+				Adicionar<i class="material-icons left">add_circle_outline</i></button>
+		 </form>
+	</div>
 	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>	
 	
 </body>

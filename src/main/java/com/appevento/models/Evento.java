@@ -1,17 +1,19 @@
 package com.appevento.models;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Evento implements Serializable{
 	
+	//Id Auto
 	private static final long serialVersionUID = 1L;
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long codigo;
@@ -20,6 +22,10 @@ public class Evento implements Serializable{
 	private String local;
 	private String data;
 	private String horario;
+	
+	//Relação EventoConvidado
+	@OneToMany
+	private List<Convidado> convidado;
 	
 	public long getCodigo() {
 		return codigo;
